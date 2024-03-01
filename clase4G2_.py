@@ -23,7 +23,7 @@ class Paciente:
     def asignarCedula(self,c):
         self.__cedula = c
 
-class Sistema:
+class Sistema():
     def __init__(self):
       self.__lista_pacientes = {}
       self.__numero_pacientes = len(self.__lista_pacientes)
@@ -48,20 +48,24 @@ class Sistema:
     def verNumeroPacientes(self):
         return self.__numero_pacientes
     
-    def verDatosPaciente(self):
+    def verDatosPaciente():
         cedula = int(input("Ingrese la cedula a buscar: "))
+        p = Paciente
         # 1. Creo un objeto sistema para tener acceso a sus métodos 
-        s = Sistema()
+        s = Sistema
         # 2. Verifico que el paciente exista
-        if s.__lista_pacientes.get(cedula):
+        if s.__lista_pacientes.get(p.verCedula):
             # 3. Doy la información requerida con formato
             def __str__(self):
-                infoPaciente= s.__lista_pacientes.get(cedula)
+                infoPaciente= s.self.__lista_pacientes.get(cedula)
                 return infoPaciente
         
         else:
             print(f"La persona identificada con la cc {cedula} no se encuentra en el sistema ")
-        """"
+
+
+    verDatosPaciente()
+    """"
         for paciente in self.__lista_pacientes:
             if cedula == paciente.verCedula():
                 print("Nombre: " + paciente.verNombre())
@@ -69,7 +73,7 @@ class Sistema:
                 print("Genero: " + paciente.verGenero())
                 print("Servicio: " + paciente.verServicio())
         """""      
-
+"""""
 def main():
     a= Sistema()
     a.ingresarPaciente()
@@ -77,3 +81,4 @@ def main():
 
 if __name__=="__main__":
     main()
+"""
