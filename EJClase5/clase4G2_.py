@@ -1,12 +1,12 @@
 import re # Librería que permite compilar información para hacer operaciones más eficientes
-class Paciente:
+class Paciente: #Creamos la clase, establecemos los atributos de instancia privados.
     def __init__(self):
       self.__nombre = ""
       self.__cedula = 0
       self.__genero = ""
       self.__servicio = ""
       
-    def verNombre(self):
+    def verNombre(self): #Establecemos los getters de los atributos de instancia.
         return self.__nombre
     def verServicio(self):
         return self.__servicio
@@ -15,7 +15,7 @@ class Paciente:
     def verCedula(self):
         return self.__cedula
     
-    def asignarNombre(self,n):
+    def asignarNombre(self,n):#Establecemos los setters de los atributos de instancia.
         self.__nombre = n
     def asignarServicio(self,s):
         self.__servicio = s
@@ -48,10 +48,12 @@ class Sistema2():
         self.__numero_pacientes = len(self.__lista_pacientes)
 
     def verNumeroPacientes(self):
+        # Creo un objeto tipo sistema para accerder al métodod de número de pacientes
         sis = Sistema1
         return sis.self.__numero_pacientes
     
     def verificarPac(self,cedula):
+            #Establecemos el indicador de sí el paciente se encuentra o no en el sistema
             encontrado = False
             for p in self.__lista_pacientes:
                 if cedula == p.verCedula():
@@ -60,9 +62,11 @@ class Sistema2():
             return encontrado
     
     def verLista(self):
+        #Método empleado para recorrer el atributo privado donde se guardan los pacientes
         return self.__lista_pacientes
     
     def verDatosPaciente():
+        #creamos un objeto tipo sistema 1 para acceder a la lista de pacientes
         sis = Sistema1()
         while True:
             try:
@@ -74,6 +78,7 @@ class Sistema2():
                     try:
                      if TipoBusqueda == 0:
                         cedulav = input("Ingrese la cedula o parte de ella: ")
+                        #Línea que nos permite encapsular las fracciones parciales de la cédula para facilitar la búsqueda
                         patron = re.complie(f".*{cedulav}.*")
                         c = 0
                         listadispobible = sis.verLista()
@@ -88,7 +93,7 @@ class Sistema2():
                                 print("No se tiene coincidencias.")
                      if TipoBusqueda == 1:
                             nombre = input("Ingrese el nombre o parte de él: ")
-
+                            #Línea que nos permite encapsular las fracciones parciales del nombre para facilitar la búsqueda
                             patron = re.complie(f".*{nombre}.*")
                             c = 0
                             listadispobible = sis.verLista()
