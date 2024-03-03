@@ -1,4 +1,4 @@
-from clase4G2_ import *
+from EJClase6.EJClase5.clase4G2_ import *
 
 def main():
     mi_sistema = Sistema()

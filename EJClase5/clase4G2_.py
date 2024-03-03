@@ -52,7 +52,7 @@ class Sistema():
         cedula = int(input("Ingrese la cedula a buscar: "))
         p = Paciente
         # 1. Creo un objeto sistema para tener acceso a sus métodos 
-        s = Sistema
+
         # 2. Verifico que el paciente exista
         if s.__lista_pacientes.get(p.verCedula):
             # 3. Doy la información requerida con formato
