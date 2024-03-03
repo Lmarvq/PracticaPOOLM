@@ -1,7 +1,7 @@
-from EJClase6.EJClase5.clase4G2_ import *
+from EJClase5.clase4G2_ import *
 
 def main():
-    mi_sistema = Sistema()
+    mi_sistema = Sistema2()
 
     while True:
         opcion = int(input("1. Nuevo paciente\n - 2. Numero de paciente\n - 3. Datos paciente\n - 4. Salir:  \n"))
